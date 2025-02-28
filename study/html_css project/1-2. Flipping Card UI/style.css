@@ -1,3 +1,4 @@
+/* 전체 문서 초기 설정 */
 * {
 	margin: 0;
 	padding: 0;
@@ -6,50 +7,58 @@
 }
 
 section {
-	position: relative;
+	position: relative; /* relative는 absolute의 조상 기준을 표시한것으로 ::efore와 after의 가상 요소의 조상 기준을 표시한것 */
+	/* 중앙 정렬을 위해 높이 설정 */
 	min-height: 100vh;
 	width: 100%;
 	background: #121321;
+	/* flex를 이용한 중앙 정렬 */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: #fff;
+	/* 요소를 3D로 변환하여 원근감 줄때 사용, 깊이감을 설정 */
 	perspective: 1000px;
 }
 
+/* 위 아래 원 모양 */
 section::before {
 	content: '';
-	position: absolute;
+	position: absolute; /* body 기준으로 이동 */
 	height: 240px;
 	width: 240px;
 	border-radius: 50%;
 	transform: translate(-150px, -100px);
-	background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+	background: linear-gradient(90deg, #9c27b0, #f3f5f5); /* 그라데이션 효과 */
 }
 
 section::after {
 	content: '';
-	position: absolute;
+	position: absolute; /* body 기준으로 이동 */
 	height: 240px;
 	width: 240px;
 	border-radius: 50%;
 	transform: translate(150px, 100px);
-	background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+	background: linear-gradient(90deg, #9c27b0, #f3f5f5); /* 그라데이션 효과 */
 }
 
 .container {
+	/* .card의 조상 기준 표시 */
 	position: relative;
 	height: 225px;
 	width: 375px;
-	z-index: 100;
-	transition: 0.6s;
+	z-index: 100; /* 요소의 쌓임 순서를 제어, 클수롤 제일 위에 쌓임, 여기서는 두개의 원 위에 보이도록 하기 위해 사용 */
+	transition: 0.6s; /* 변화 하는 동안 0.6s 소요 */
 	transform-style: preserve-3d;
 }
+
+/* 마우스 오버 했을 때 회전 */
 .container:hover {
 	transform: rotateY(180deg);
 }
 .container .card {
 	position: absolute;
+	/* 조상의 크기를 상속 */
 	height: 100%;
 	width: 100%;
 	padding: 25px;
@@ -58,8 +67,10 @@ section::after {
 	background: rgba(255, 255, 255, 0.1);
 	box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
 	border: 1px solid rgba(255, 255, 255, 0.1);
-	backface-visibility: hidden;
+	backface-visibility: hidden; /* 3D 변환을 적용한 요소의 뒷면이 보이는지의 유무를 설정 */
 }
+
+/* 앞면 */
 .front-face header,
 .front-face .logo {
 	display: flex;
@@ -97,6 +108,8 @@ h5.number {
 h5.name {
 	margin-top: 20px;
 }
+
+/* 뒷면 */
 .card.back-face {
 	border: none;
 	padding: 15px 25px 25px 25px;
@@ -121,11 +134,14 @@ h5.name {
 	height: 40px;
 	width: 85%;
 	border-radius: 6px;
+	/* 선형 그라데이션을 만드는 패턴으로 그라데이션 방향, 그라데이션 설정와 위치1, 2...값으로 설정 */
 	background: repeating-linear-gradient(
-		#fff,
-		#fff 3px,
-		#efefef 0px,
-		#efefef 9px
+		/* 첫번째 색상 */ #fff,
+		/* #fff가 3px까지 지속, 즉 첫 번째 색상인 흰색이 3픽셀 높이로 유지 */ #fff
+			3px,
+		/*#efefef은 0픽셀에서 시작하므로, 흰색이 끝나는 지점(3픽셀)에서 바로 연한 회색으로 전환*/
+			#efefef 0px,
+		/*  3픽셀에서 시작하여 9픽셀까지 계속 */ #efefef 9px
 	);
 }
 .signature i {
