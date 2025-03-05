@@ -1,6 +1,6 @@
 const sliderTabs = document.querySelectorAll(".slider-tab");
 const sliderIndicator = document.querySelector(".slider-indicator");
-const sliderControls = document.querySelector(".slider-controlsr");
+const sliderControls = document.querySelector(".slider-controls");
 
 // update the indicator height and width
 const updateIndicator = (tab, index) => {
@@ -12,11 +12,11 @@ const updateIndicator = (tab, index) => {
     sliderControls.scrollTo({ left: scrollLeft, behavior: "smooth" });
 };
 
-// Initiallize swiper instance
+// Initiallize swiper instance 
 const swiper = new Swiper('.slider-container', {
     effect: "fade",
     speed: 1300,
-    // autoplay: { delay: 4000 }
+    autoplay: { delay: 4000 },
     navigation: {
         prevEl: "#slide-prev",
         nextEl: "#slide-next"
@@ -41,4 +41,4 @@ sliderTabs.forEach((tab, index) => {
 });
 
 updateIndicator(sliderTabs[0], 0);
-window.addEventListener("resize", () => updatePagination(sliderTabs[swiper.activeIndex], 0));
+window.addEventListener("resize", () => updateIndicator(sliderTabs[swiper.activeIndex], 0));

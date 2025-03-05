@@ -1,3 +1,4 @@
+/* 초기화 */
 * {
 	margin: 0;
 	padding: 0;
@@ -10,6 +11,7 @@
 	width: 100%;
 	overflow: hidden;
 }
+/* slider-wrapper */
 .slider-wrapper .slider-item {
 	position: relative;
 	width: 100%;
@@ -97,7 +99,7 @@
 .slider-item .slide-content .slide-button {
 	color: #fff;
 	opacity: 0;
-	width: 250px;
+	width: 0;
 	padding: 13px 0;
 	display: block;
 	margin-top: 45px;
@@ -130,7 +132,7 @@
 	color: #000;
 	background: #fff;
 }
-
+/* slider-controls */
 .slider-container .slider-controls {
 	position: absolute;
 	bottom: 45px;
@@ -140,6 +142,7 @@
 	scrollbar-width: none;
 }
 .slider-controls .slider-pagination {
+	position: relative;
 	display: flex;
 	margin: 0 auto;
 	padding: 0 20px;
