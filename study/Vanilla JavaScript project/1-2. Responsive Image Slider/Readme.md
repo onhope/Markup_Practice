@@ -6,6 +6,8 @@ https://www.youtube.com/watch?v=Na_-33eKHek&list=PLImJ3umGjxdAuARwziklrT2QEELizO
 
 ## Goal
 
+<img src="images/goal.png">
+
 ## Study
 
 **1. swiper**  
