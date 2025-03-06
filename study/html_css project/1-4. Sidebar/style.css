@@ -1,3 +1,4 @@
+/* 초기화 */
 * {
 	margin: 0;
 	padding: 0;
@@ -12,6 +13,7 @@
 	height: 100vh;
 	width: 100%;
 }
+/* .sidebar_menu */
 .main-box .sidebar_menu {
 	position: fixed;
 	height: 100vh;
@@ -20,6 +22,7 @@
 	background: rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
 }
+/* .sidebar_menu .logo */
 .sidebar_menu .logo {
 	position: absolute;
 	width: 100%;
@@ -35,6 +38,7 @@
 	line-height: 60px;
 	text-decoration: none;
 }
+/* .sidebar_menu .menu */
 .sidebar_menu .menu {
 	position: absolute;
 	top: 80px;
@@ -59,6 +63,7 @@
 	border-left: 1px solid #fff;
 	box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
+/* .sidebar_menu .social-media */
 .sidebar_menu .social-media {
 	position: absolute;
 	left: 50%;
@@ -76,10 +81,11 @@
 .social-media i:hover {
 	opacity: 1;
 }
+/* check - 버튼*/
 #check {
 	display: none;
 }
-.main-box .btn-one i {
+.main-box .btn_one i {
 	color: #fff;
 	font-size: 30px;
 	font-weight: 700;
@@ -90,7 +96,7 @@
 	opacity: 1;
 	transition: all 0.3s linear;
 }
-.sidebar_menu .btn-two i {
+.sidebar_menu .btn_two i {
 	font-size: 25px;
 	line-height: 60px;
 	position: absolute;
@@ -99,18 +105,21 @@
 	opacity: 0;
 	transition: all 0.3s linear;
 }
-.btn-one i:hover {
+.btn_one i:hover {
 	font-size: 29px;
 }
-.btn-two i:hover {
+.btn_two i:hover {
 	font-size: 24px;
 }
+/* #check가 체크박스가 체크된 상태일 때, 그 다음에 오는 형제 요소 중에 클래스가 sidebar_menu인 요소를 스타일링 */
 #check:checked ~ .sidebar_menu {
 	left: 0px;
 }
-#check:checked ~ .btn-one i {
+/* #check가 체크박스가 체크된 상태일 때, 그 다음에 오는 형제 요소 중에 클래스가 btn_one i인 요소를 스타일링 */
+#check:checked ~ .btn_one i {
 	opacity: 0;
 }
-#check:checked ~ .btn-two i {
+/* #check가 체크박스가 체크된 상태일 때, 그 다음에 오는 형제 요소 중에 클래스가 sidebar_menu .btn_two i인 요소를 스타일링 */
+#check:checked ~ .sidebar_menu .btn_two i {
 	opacity: 1;
 }
