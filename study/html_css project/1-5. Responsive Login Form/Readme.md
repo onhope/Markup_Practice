@@ -6,4 +6,6 @@ https://www.youtube.com/watch?v=9XKRNfPrNpM&list=PLImJ3umGjxdD3ov2lwg0SM5rxz5v9F
 
 ## Goal
 
+<img src="img/goal.png ">
+
 ## Study
