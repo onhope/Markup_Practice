@@ -31,6 +31,7 @@ body {
 	padding: 10px 30px 50px 30px;
 }
 .wrapper form .field {
+	/* absolute의 기준점 */
 	position: relative;
 	height: 50px;
 	width: 100%;
@@ -46,7 +47,7 @@ body {
 	border: 1px solid lightgray;
 	transition: all 0.3s ease;
 }
-/* input이 포커스 되었을 때 선색 */
+/* input이 포커스 되었을 때 선 색 */
 .wrapper form .field input:focus,
 .wrapper form .field input:valid {
 	border-color: hsl(230, 60%, 54%);
