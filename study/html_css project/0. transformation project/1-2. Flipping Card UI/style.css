@@ -5,36 +5,46 @@
 	font-family: 'Black Han Sans', sans-serif;
 }
 
-body {
+section {
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: linear-gradient(to bottom, #ffcfef, #0a97b0);
+	/* 회전할 때 원근감 설정 */
+	perspective: 1000px;
 }
 
 .container {
 	width: 600px;
-	height: 800px;
+	height: 700px;
 	background-color: #fef5ec;
 	border-radius: 25px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	transition: all 0.3s ease;
+	/* 회전 효과 */
+	transition: transform 0.8s ease;
 	transform-style: preserve-3d;
 }
 
 .container:hover {
+	/* 마우스 오버 했을 때 Y축 기준으로 180도 회전 */
 	transform: rotateY(180deg);
 }
 
 .container .card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* container의 width와 height를 상속 */
+	height: 100%;
+	width: 100%;
+	/* .card 클래스의 뒷면이 안 보이도록 설정 */
 	backface-visibility: hidden;
 }
 
 /* front */
 .front {
+	/*flex로 중앙 정렬 안되길래 position 써서 했음 */
+	/* 다시 공부 해서 flex로 중앙 정렬 할 수 있도록 바꿔보기 */
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -49,6 +59,8 @@ body {
 	margin: 30px;
 }
 .title .item {
+	/* .item이 span이라 인라인 요소라서 height, width 가 적용안되서 인라인 블록으로 변경  */
+	/* 참고로 인라인은 패딩, 마진 적용되는데 좌우만 가능, 위 아래는 불가 */
 	display: inline-block;
 	padding: 15px;
 	height: 140px;
@@ -91,6 +103,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	/* 카드가 회전하면서 뒤의 내용도 같이 회전되어야 하니까 transform 동일하게 설정 */
+	transform: rotateY(180deg);
 }
 
 .back .list {
