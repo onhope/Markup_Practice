@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	min-height: 100vh;
+	width: 100%;
+	display: flex; /* container 중앙 정렬 */
+	justify-content: center;
+	align-items: center;
+	background: #dad3f8;
+}
+.container {
+	/* max-width: 950x; */
+	width: 50%; /* 임의로 조정 */
+	margin: 0 20px;
+	background: #fff;
+	border-radius: 12px;
+	padding: 40px 50px 40px 40px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .main-title {
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+.container .content {
+	display: flex; /* list, text-content 정렬  */
+	align-items: center;
+	justify-content: space-between;
+}
+.container .content .list {
+	display: flex; /* label 정렬 */
+	flex-direction: column;
+	position: relative; /* .content .indicator의 기준점 */
+	width: 20%;
+	margin-right: 50px;
+}
+.content .list label {
+	height: 60px;
+	font-size: 22px;
+	font-weight: 500;
+	border-radius: 12px;
+	line-height: 60px;
+	cursor: pointer;
+	padding-left: 25px;
+	color: #333;
+	z-index: 12; /* indicator볻 위에 올라가야 하므로 우선순위 조정 */
+	transition: all 0.4s ease;
+}
+.content .list label:hover {
+	color: #6d50e2;
+}
+/* 라디오버튼 체크시, 글자색 변화 */
+#home:checked ~ .list .home,
+#blog:checked ~ .list .blog,
+#help:checked ~ .list .help,
+#code:checked ~ .list .code,
+#about:checked ~ .list .about {
+	color: #fff;
+}
+.content .indicator {
+	position: absolute;
+	height: 60px; /* label과 동일하게 지정 */
+	width: 100%; /* label과 동일하게 지정 */
+	top: 0;
+	left: 0;
+	background: #6d50e2;
+	border-radius: 12px;
+	transition: all 0.4s ease;
+}
+/* 라디오버튼 체크시, 배경의 위치 이동 */
+#home:checked ~ .indicator {
+	top: 0;
+}
+#blog:checked ~ .list .indicator {
+	top: 60px;
+}
+#help:checked ~ .list .indicator {
+	top: 120px;
+}
+#code:checked ~ .list .indicator {
+	top: 180px;
+}
+#about:checked ~ .list .indicator {
+	top: 240px;
+}
+.container input[type='radio'] {
+	display: none;
+}
+.container .content .text-content {
+	width: 80%;
+	height: 100%;
+}
+.content .text-content .text {
+	display: none;
+}
+.content .text-content .home {
+	display: block;
+}
+/* 라디오버튼 체크시, 각 영역의 텍스트가 보이게 하기 */
+#home:checked ~ .text-content .home,
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about {
+	display: block;
+}
+/* 라디오버튼 체크시, home은 클릭시 안 보이도록 하기 */
+#blog:checked ~ .text-content .home,
+#help:checked ~ .text-content .home,
+#code:checked ~ .text-content .home,
+#about:checked ~ .text-content .home {
+	display: none;
+}
+.content .text-content .title {
+	font-size: 25px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.content .text-content p {
+	text-align: justify;
+}

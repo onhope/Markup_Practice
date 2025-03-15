@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Tab Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/105f54a7eb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="main-title">CSS Vertical Tabs</div>
+    <div class="content">
+      <input type="radio" name="indicator" checked id="home">
+      <input type="radio" name="indicator" id="blog">
+      <input type="radio" name="indicator" id="help">
+      <input type="radio" name="indicator" id="code">
+      <input type="radio" name="indicator" id="about">
+      <div class="list">
+        <!-- label은 인라인 요소임 -->
+        <label for="home" class="home">
+          <i class="fas fa-home"></i>
+          <span class="topic">Home</span>
+        </label>
+        <label for="blog" class="blog">
+          <i class="fas fas fa-blog"></i>
+          <span class="topic">Blog</span>
+        </label>
+        <label for="help" class="help">
+          <i class="far fa-envelope"></i>
+          <span class="topic">Help</span>
+        </label>
+        <label for="code" class="code">
+          <i class="fas fa-code"></i>
+          <span class="topic">Code</span>
+        </label>
+        <label for="about" class="about">
+          <i class="far fa-user"></i>
+          <span class="topic">About</span>
+        </label>
+        <div class="indicator">
+        </div>
+      </div>
+      <div class="text-content">
+        <div class="home text">
+          <div class="title">Home Content</div>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat reiciendis eaque dolorum maxime autem
+            nulla nihil aliquam, eum similique tempora voluptate dolore necessitatibus unde beatae neque veritatis
+            repudiandae harum consequuntur perferendis consectetur id odio pariatur fugiat! Fugit optio nostrum at fuga
+            eaque expedita? Commodi laudantium quos earum non, voluptas delectus nostrum suscipit vel molestias minus
+            harum eligendi facilis excepturi aperiam repudiandae aut exercitationem fuga numquam vero? Corrupti iste
+            assumenda delectus, unde ipsam optio aut animi id consequatur minus iure dicta ut sequi ullam eveniet et qui
+            quia? Earum, ut accusamus.</p>
+        </div>
+        <div class="blog text">
+          <div class="title">Blog Content</div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugit earum nobis, eveniet molestias
+            ad repellendus ratione dignissimos sed possimus, iusto praesentium, optio illo soluta quasi! Nostrum nulla
+            id facere perferendis aliquid, amet excepturi ex, necessitatibus earum asperiores tenetur? Repellendus nisi
+            harum laborum repellat beatae impedit ipsam neque eaque rem cum dicta error eos nobis voluptate, sequi
+            perspiciatis laudantium, aliquam itaque quas exercitationem iusto? Repellat adipisci fuga neque optio
+            voluptatum earum vitae suscipit eum, cum sequi ea, sint deserunt doloremque illo minus tenetur ab modi animi
+            id culpa nihil? Explicabo, iusto.</p>
+        </div>
+        <div class="help text">
+          <div class="title">Help Content</div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iusto fugit soluta, molestiae possimus non
+            consequuntur aspernatur ratione rerum illo similique voluptates, amet expedita omnis ducimus tenetur sint
+            molestias repellendus, ipsa et! Sequi dolorem quidem praesentium eveniet et sapiente quas velit ipsam labore
+            vero sint ducimus architecto voluptatum, repellat molestiae veniam doloribus necessitatibus eligendi ipsa,
+            facere dolorum mollitia iste sunt atque. Nihil illo incidunt mollitia est rerum veritatis officia ab
+            corrupti dolores sit, veniam dicta repudiandae accusantium voluptates nisi! Quibusdam obcaecati, error
+            molestiae voluptas, itaque corrupti dolore aliquid nobis rerum ipsam mollitia?</p>
+        </div>
+        <div class="code text">
+          <div class="title">Code Content</div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A fugiat nostrum fugit tenetur. Laudantium vitae
+            totam eius tempore quidem minima eveniet, eos aperiam facere consequatur reprehenderit praesentium
+            voluptatem. Quas odit, voluptatum tempora exercitationem totam, non rem minus ipsam sunt laborum illum vitae
+            porro nam tenetur officia? Tenetur velit amet cumque? Vero architecto minima, doloremque ipsa dolorum natus
+            cumque ea asperiores eius nostrum vitae labore maxime, nesciunt deserunt alias! Soluta maiores ea non
+            laudantium facere nam dicta, est cum eos? Delectus hic ducimus totam commodi, atque consequatur, libero quia
+            pariatur nesciunt ipsam nobis quae placeat?</p>
+        </div>
+        <div class="about text">
+          <div class="title">About Content</div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus odio provident praesentium numquam
+            dolores eveniet dolorum placeat omnis obcaecati, quidem at tenetur aut, magni est tempora. Provident
+            temporibus sed adipisci voluptas dolorum assumenda ut doloribus deserunt placeat quis in molestias
+            reiciendis odit optio aperiam quisquam incidunt, odio distinctio amet nesciunt magnam accusantium modi,
+            autem exercitationem! Quis illo aliquam aliquid non reiciendis, cumque temporibus voluptate, qui doloremque
+            maiores voluptatibus perferendis quam dolorem iusto asperiores recusandae omnis ipsum aperiam fuga? Quae
+            tenetur consequuntur, magnam deserunt neque adipisci architecto impedit omnis vero molestiae iure porro
+            corporis iusto nesciunt?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
