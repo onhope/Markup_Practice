@@ -1,0 +1,92 @@
+/* 전체 문서 초기 설정 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', serif;
+}
+
+img {
+	width: 75px;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #262626;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 50px;
+	background-color: #f0efeb;
+	padding: 50px;
+	border-radius: 25px;
+}
+.item {
+	border-radius: 20px;
+	width: 350px;
+	height: 225px;
+	padding: 15px;
+}
+.item header {
+	margin-bottom: 20px;
+}
+
+.item header h1 {
+	font-weight: 250;
+	margin-bottom: 15px;
+}
+.item header img {
+	padding-left: 20px;
+}
+.item .card-detail {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+.item .card-detail .info {
+	letter-spacing: 2px;
+}
+.card-detail .info .num {
+	font-weight: 300;
+	margin-bottom: 3px;
+}
+.info .valid-date h6 {
+	font-size: 6px;
+	font-weight: 300;
+}
+.info .valid-date h5 {
+	font-weight: 300;
+}
+.card-detail .info .name {
+	font-size: 14px;
+	font-weight: 400;
+}
+.card-detail .logo {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.card-detail .logo p {
+	font-size: 13px;
+}
+.card1 {
+	background-color: #000000;
+	color: #c0c0c0;
+}
+.card2 {
+	background-color: #111e2f;
+	color: #c1cbd8;
+}
+.card3 {
+	background-color: #8e959d;
+}
+.card4 {
+	background-color: #ffffff;
+}
