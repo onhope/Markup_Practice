@@ -1,0 +1,129 @@
+/* 초기화 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.main-box {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url(img/bg.jpg) right no-repeat;
+	background-size: cover;
+}
+
+.btn_one i {
+	position: absolute;
+	top: 10px;
+	left: 16px;
+	font-size: 32px;
+	font-weight: bold;
+	width: 40px;
+	height: 40px;
+	line-height: 35px;
+	text-align: center;
+	color: #826ffe;
+	border: 3px solid #826ffe;
+	border-radius: 50%;
+}
+
+.sidebar-menu {
+	position: relative;
+	width: 230px;
+	height: 100vh;
+	left: -280px;
+	background: #f6f4ff;
+}
+.sidebar-menu .logo {
+	display: flex;
+	padding: 25px 30px;
+}
+.sidebar-menu .logo img {
+	width: 50px;
+	height: auto;
+	margin-right: 15px;
+}
+.sidebar-menu .logo h1 {
+	font-size: 24px;
+	line-height: 50px;
+}
+
+.sidebar-menu .btn_two {
+	position: absolute;
+	right: 30px;
+	top: 80px;
+}
+.sidebar-menu .btn_two i {
+	font-size: 12px;
+	width: 20px;
+	height: 20px;
+	line-height: 17px;
+	text-align: center;
+	color: #826ffe;
+	border: 2px solid #826ffe;
+	border-radius: 50%;
+}
+.sidebar-menu .menu {
+	list-style: none;
+	margin: 20px 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.sidebar-menu .menu li {
+	width: 170px;
+	margin: 0 10px;
+}
+
+.sidebar-menu .menu li a {
+	display: inline-block;
+	width: 100%;
+	padding: 10px 15px;
+}
+
+.sidebar-menu .menu li:hover,
+.sidebar-menu .menu li a:hover {
+	background: #826ffe;
+	border-radius: 25px;
+	color: #f6f4ff;
+}
+
+.sidebar-menu .menu li a {
+	font-weight: 400;
+	color: #826ffe;
+	text-decoration: none;
+}
+
+.sidebar-menu .menu i {
+	margin-right: 10px;
+	font-size: 25px;
+	vertical-align: middle;
+}
+
+.sidebar-menu .menu .bottom_menu {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+#check {
+	display: none;
+}
+
+#check:checked ~ .sidebar-menu {
+	left: 0;
+}
+
+#check:checked ~ .btn_one i {
+	opacity: 0;
+}
+
+#check:checked ~ .btn_two i {
+	opacity: 1;
+}
