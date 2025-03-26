@@ -47,7 +47,7 @@ body {
 	border: 1px solid lightgray;
 	transition: all 0.3s ease;
 }
-/* input이 포커스 되었을 때 선 색 */
+/* input이 포커스 되거나, 유효한 값을 입력했을 때 선 색 */
 .wrapper form .field input:focus,
 .wrapper form .field input:valid {
 	border-color: hsl(230, 60%, 54%);
@@ -62,7 +62,7 @@ body {
 	pointer-events: none;
 	transition: all 0.3s ease;
 }
-/* input에 focus를 했을때, label을 위로 올리기 */
+/* input에 focus되거나, 유효한 값을 입력했을 때, label을 위로 올리기 */
 .wrapper form .field input:focus ~ label,
 .wrapper form .field input:valid ~ label {
 	top: 0%;
@@ -81,6 +81,8 @@ body {
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
+
+/* 버튼 클릭했을 때 변화 */
 .wrapper form .field input[type='submit']:active {
 	transform: scale(0.95);
 }
