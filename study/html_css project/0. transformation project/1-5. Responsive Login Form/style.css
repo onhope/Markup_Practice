@@ -96,6 +96,11 @@ body {
 	position: relative;
 	/* background-color: red; */
 }
+
+.right form .email,
+.right form .pass {
+	position: relative;
+}
 .right form .email input,
 .right form .pass input {
 	border: 1px solid #7065ff;
@@ -104,6 +109,18 @@ body {
 	margin-bottom: 20px;
 	border-radius: 15px;
 	outline: none;
+	transition: all 0.3s ease;
+}
+.right form .email label,
+.right form .pass label {
+	position: absolute;
+	top: 30%;
+	left: 20px;
+	font-size: 17px;
+	color: #999;
+	transform: translateY(-30%);
+	pointer-events: none;
+	transition: all 0.3s ease;
 }
 .right form .email input:focus,
 .right form .pass input:focus {
@@ -111,6 +128,16 @@ body {
 	outline: none;
 	color: #7065ff;
 	font-size: 17px;
+}
+.right form .email input:focus ~ label,
+.right form .email input:valid ~ label,
+.right form .pass input:focus ~ label,
+.right form .pass input:valid ~ label {
+	top: 0%;
+	color: #4158d0;
+	background: #fff;
+	font-size: 16px;
+	transform: translateY(-50%);
 }
 .right form .check {
 	position: relative;
