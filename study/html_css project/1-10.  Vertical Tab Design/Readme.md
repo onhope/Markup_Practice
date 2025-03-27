@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=DTtPuBcuYF8&list=PLImJ3umGjxdD3ov2lwg0SM5rxz5v9F
 
 ### 1. line-height와 height를 이용한 텍스트 수직 중앙 정렬
 
-![alt text](image.png)
+![alt text](img/image.png)
 
 ### 2. input과 label 연결해서 탭 이동하는 효과
 
