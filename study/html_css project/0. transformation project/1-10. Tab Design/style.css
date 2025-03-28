@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	background: linear-gradient(120deg, #9653c6, #e69594);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* container */
+.container {
+	width: 50%;
+	height: 350px;
+	background: #fff;
+	margin: 0 20px;
+	border-radius: 12px;
+	padding: 40px 50px 40px 40px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: center;
+}
+.container input[type='radio'] {
+	display: none;
+}
+/* container : content */
+.container .content {
+	width: 90%;
+	/* background: violet; */
+	display: flex;
+	flex-direction: column;
+}
+/*content : list */
+.content .list {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	background: yellowgreen;
+}
+.list label {
+	flex: 1; /* 동일한 비율로 여백을 차지하도록 설정 */
+	text-align: center;
+	/* background: #7057c6; */
+	position: relative;
+}
+.list label::after {
+	content: '';
+	display: block;
+	height: 2px;
+	background: #7057c6;
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 100%;
+}
+.list label span {
+	font-size: 18px;
+	font-weight: bold;
+	transition: all 0.4s ease;
+	/* background: turquoise; */
+}
+.list label span:hover {
+	color: #7057c6;
+}
+.list .indicater {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 3px;
+	background: #ddd;
+}
+/* content : text-content */
+.content .text-content {
+	margin-top: 35px;
+	/* background: yellow; */
+}
+.content .text-content .text {
+	display: none;
+}
+.content .text-content .home {
+	display: block;
+}
+.content .text-content .text .title {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.content .text-content .text p {
+	font-weight: 300;
+}
