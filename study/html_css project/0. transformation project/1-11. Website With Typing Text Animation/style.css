@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	height: 100vh;
+	background: #000;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header {
+	height: 100%;
+	background: #212121;
+	padding: 60px 50px;
+}
+header .title {
+	width: 100%;
+	text-align: center;
+}
+.title h1 {
+	font-size: 42px;
+	font-weight: 500;
+	letter-spacing: -1px;
+	line-height: 1;
+}
+header .typing {
+	width: 100%;
+	margin: 30px 0;
+	padding: 20px 20px 15px 15px;
+	background: #000;
+}
+.typing .typing-text {
+	color: #ccc;
+	border-right: 4px solid #ccc;
+	letter-spacing: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typing 7s steps(28) infinite;
+}
+@keyframes typing {
+	0% {
+		width: 0ch;
+	}
+	50% {
+		width: 28ch;
+	}
+	100% {
+		width: 0%;
+	}
+}
+header .content .top,
+header .content .bottom {
+	width: 100%;
+	padding: 20px 20px 15px 15px;
+	border: 8px solid #909090;
+}
+.content .top {
+	margin-bottom: 7px;
+}
+.content .top .circles {
+	width: 18%;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.content .bottom .circles {
+	width: 15%;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.top .circles .circle {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+.bottom .circles .circle {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+.top .circles .circle:first-child,
+.bottom .circles .circle:first-child {
+	background-color: #c66a6e;
+}
+.top .circles .circle:nth-child(2),
+.bottom .circles .circle:nth-child(2) {
+	background-color: #f0aa52;
+}
+.top .circles .circle:nth-child(3),
+.bottom .circles .circle:nth-child(3) {
+	background-color: #43bc59;
+}
+.content .top .text,
+.content .bottom .text {
+	font-size: 12px;
+}
