@@ -21,3 +21,31 @@ https://www.youtube.com/watch?v=fGtB9VRHQb0&list=PLImJ3umGjxdD3ov2lwg0SM5rxz5v9F
 ```
 
 => input 요소사 focus, valid 상태일 때, 같은 부모 요소 내에서 그 input의 형제 요소인 underline 클래스에 대한 ::after 가상요소를 스타일링 한다는 의미
+
+### 2. 요소를 중앙 정렬 하는 방법
+
+**(1) Flex**
+
+```
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+```
+
+**(2) Grid**
+
+```
+body {
+	height: 100vh;
+	display: grid;
+	width: 100%;
+	place-items: center;
+}
+```
+
+### 3. trasform-origin
+
+: transform의 기준점을 지정

@@ -7,9 +7,10 @@
 html,
 body {
 	height: 100vh;
+	/* grid 이용한 중앙 정렬 */
 	display: grid;
 	width: 100%;
-	place-items: center;
+	place-items: center; /* 수평, 수직 동시에 중앙 정렬 */
 	background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
 }
 .container {
@@ -26,6 +27,7 @@ body {
 	margin: 20px 0 10px 0;
 	position: relative;
 }
+/* 가상선택자를 이용한 밑줄 효과 */
 .container form .title::before {
 	content: '';
 	position: absolute;
@@ -70,10 +72,11 @@ body {
 	transform-origin: left;
 	transition: all 0.3s ease;
 }
+/* input에 focus가 되거나, 유효한 값이 입력되었을 때 효과 */
 .container form .input-box input:focus ~ .underline::after,
 .container form .input-box input:valid ~ .underline::after {
 	transform: scaleX(1);
-	transform-origin: left;
+	transform-origin: left; /* transform 기준점 설정 */
 }
 .container form .button {
 	margin: 40px 0 20px 0;
