@@ -32,38 +32,46 @@
           <input type="text" placeholder="Search">
         </div>
         <div class="private">
-          <a href="#login-popup"><i class="fa-solid fa-user"></i></a>
+          <label for="popup-toggle">
+            <i class="fa-solid fa-user"></i>
+          </label>
+          <input type="checkbox" id="popup-toggle">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="popup-toggle" class="close">
+                <i class="fa-solid fa-x"></i>
+              </label>
+              <h2>Sign up</h2>
+              <p>Already a member? <a href="#">Login</a></p>
+              <form>
+                <div class="input-box">
+                  <input type="text" placeholder="Email" required>
+                  <div class="underline"></div>
+                </div>
+                <div class="input-box">
+                  <input type="password" placeholder="Password" required>
+                  <div class="underline"></div>
+                </div>
+                <div class="input-box button">
+                  <input type="submit" value="Sign Up">
+                </div>
+                <div class="option">
+                  <a class="line"></a> or sign up with <a class="line"></a>
+                  <div class="social">
+                    <div class="facebook">
+                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div class="google">
+                      <a href="#"><i class="fa-brands fa-google"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
         </div>
-      </div>
     </nav>
-    <div id="login-popup" class="popup">
-      <div class="popup-content">
-        <h2>Sign up</h2>
-        <p>Already a member? <a href="#">Login</a></p>
-        <form>
-          <div class="input-box">
-            <input type="text" placeholder="Email" required>
-            <div class="underline"></div>
-          </div>
-          <div class="input-box">
-            <input type="password" placeholder="Password" required>
-            <div class="underline"></div>
-          </div>
-          <div class="input-box button">
-            <input type="submit" value="Sign Up">
-          </div>
-          <div class="option">or sign up with</div>
-        </form>
-        <div class="social">
-          <div class="facebook">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          </div>
-          <div class="google">
-            <a href="#"><i class="fa-brands fa-google"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
   </header>
 </body>
 

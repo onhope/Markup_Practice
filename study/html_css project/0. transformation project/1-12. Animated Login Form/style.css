@@ -78,12 +78,26 @@ nav .navbar {
 	padding: 0 5px 0 0;
 	font-size: 18px;
 }
-.navbar .private a {
-	font-size: 24px;
+.navbar .private label {
+	cursor: pointer;
+}
+.navbar .private label i {
+	font-size: 28px;
 	color: #000;
+}
+.navbar .private #popup-toggle {
+	display: none;
+}
+.navbar .private #popup-toggle:checked + .popup {
+	display: block;
 }
 /* popup */
 .popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	max-width: 420px;
 	width: 100%;
 }
@@ -95,6 +109,15 @@ nav .navbar {
 	border-radius: 25px;
 	backdrop-filter: blur(8px);
 	padding: 30px 50px;
+}
+.popup .popup-content label {
+	position: absolute;
+	top: 20px;
+	right: 35px;
+	cursor: pointer;
+}
+.popup .popup-content label i {
+	font-size: 18px;
 }
 .popup .popup-content h2 {
 	font-size: 30px;
@@ -128,6 +151,7 @@ nav .navbar {
 	border: none;
 	background: transparent;
 	font-size: 16px;
+	cursor: pointer;
 }
 .popup-content form .input-box .underline::before {
 	position: absolute;
@@ -156,9 +180,19 @@ nav .navbar {
 .popup-content form .option {
 	text-align: center;
 	margin-bottom: 15px;
+	font-size: 17px;
+}
+.popup-content form .option .line {
+	display: inline-block;
+	height: 2px;
+	width: 26%;
+	background: #000;
 }
 .popup-content .social {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
 }
 
 .popup-content .social a {
