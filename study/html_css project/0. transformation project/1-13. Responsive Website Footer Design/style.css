@@ -2,12 +2,12 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Playfair Display', serif;
 }
 body {
 	min-height: 100vh;
 	width: 100%;
 	background: #eeeceb;
+	font-family: 'Poppins', sans-serif;
 }
 footer {
 	position: fixed;
@@ -22,6 +22,7 @@ footer .content {
 	padding: 30px 40px 40px 40px;
 }
 footer .content .top {
+	font-family: 'Merriweather', serif;
 	text-align: center;
 	font-size: 42px;
 	font-weight: 400;
@@ -31,17 +32,19 @@ footer .content .top {
 footer .content .link-boxes {
 	width: 100%;
 	display: flex;
+	gap: 10px;
 	justify-content: space-between;
 	align-items: center;
-	color: #265bf5;
+	background: red;
 }
 .content .link-boxes .logo-details {
 	width: 120px;
 	height: 120px;
 	background: url('img/logo.png') no-repeat left/100px 100px;
+	margin-right: 30px;
 }
 .content .link-boxes .box {
-	width: calc(100% / 5 - 10px);
+	width: calc(100% / 5 - 20px);
 }
 .content .link-boxes .box:nth-child(1),
 .content .link-boxes .box:nth-child(2),
@@ -59,12 +62,62 @@ footer .content .link-boxes {
 }
 .content .link-boxes .box .link_name {
 	font-size: 18px;
-	font-weight: bold;
-	color: #265bf5;
-	margin-bottom: 10px;
+	color: #fff;
 }
 .content .link-boxes .box li {
 	list-style: none;
+	margin: 8px 0;
+}
+.content .link-boxes .box li a {
+	text-decoration: none;
+}
+
+footer .bottom-details {
+	position: relative;
+	width: 100%;
+}
+footer .bottom-details::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 3px;
+	width: 100%;
+	background: linear-gradient(90deg, transparent 50%, #265bf5 50%);
+	background-size: 10px 70%; /* 물결의 주기 조정 */
+	background-repeat: repeat-x; /* 수평 반복 */
+}
+footer .bottom-details .bottom_text {
+	max-width: 1250px;
+	margin: auto;
+	padding: 20px 40px;
+	display: flex;
+	justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: -1px;
+	color: #265bf5;
+	text-decoration: none;
+}
+.bottom-details .bottom_text .policy_terms a {
+	margin-right: 10px;
+}
+.bottom-details .bottom_text .social {
+	margin-left: -220px;
+}
+.bottom-details .bottom_text .social a {
+	font-size: 20px;
+	margin-right: 10px;
+}
+.bottom-details .bottom_text .img-box {
+	width: 80px;
+	height: 80px;
+}
+.bottom-details .bottom_text .img-box img {
+	width: 100%;
 }
 .content .link-boxes .box li a {
 	text-decoration: none;
