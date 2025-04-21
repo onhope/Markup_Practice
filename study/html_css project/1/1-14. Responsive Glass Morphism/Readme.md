@@ -22,84 +22,13 @@ https://youtu.be/alW1J24GHK4?si=BHEYnwreKa0axBxo
 
 ```
 
-- 방향 변경
-
-```
-.horizontal-gradient {
-  background: linear-gradient(to right, blue, pink);
-}
-
-```
-
-- 대각선 그라디언트
-
-```
-.diagonal-gradient {
-  background: linear-gradient(to bottom right, blue, pink);
-}
-
-```
-
-- 각도 이용
-
-```
-
-.angled-gradient {
-  background: linear-gradient(70deg, blue, pink);
-}
-```
-
-- 두가지 이상의 색 사용하기
-
-```
-.auto-spaced-linear-gradient {
-background: linear-gradient(red, yellow, blue, orange);
-}
-
-```
-
-- 색상 정지 지점 위치 설정
-
-```
-.multicolor-linear {
-background: linear-gradient(to left, lime 28px, red 77%, cyan);
-}
-```
-
-- 명확한 선 색 설정
-
-```
-  .striped {
-  background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
-  }
-
-```
-
 (2) 방사형 그라디언트
 
-- 기본 그라디언트
+- 기본
 
 ```
 .simple-radial {
   background: radial-gradient(red, blue);
-}
-
-```
-
-- 색상 정지 지점 위치 설정
-
-```
-.radial-gradient {
-  background: radial-gradient(red 10px, yellow 30%, #1e90ff 50%);
-}
-
-```
-
-- 그라디언트 중삼 위치 설정
-
-```
-.radial-gradient {
-  background: radial-gradient(at 0% 30%, red 10px, yellow 30%, #1e90ff 50%);
 }
 
 ```
