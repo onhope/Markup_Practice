@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	/* font-family: 'Pattaya', sans-serif; */
+}
+body {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	background: linear-gradient(135deg, #ff9a9e 10%, #f6416c 100%);
+}
+.bg .rect {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* bottom: 0; */
+}
+.bg .rect1 {
+	clip-path: inset(40% 45% 40% 45%);
+	background: #000;
+}
