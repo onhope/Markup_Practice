@@ -1,0 +1,72 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+section {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background: #111;
+}
+section .dots_first span {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: darkgoldenrod;
+	border-radius: 50%;
+	transform: rotate(calc(var(--i) * (360deg / 12))) translateY(30px);
+	animation: loading_first 1.5s linear infinite;
+	animation-delay: calc(var(--i) * 0.1s);
+	opacity: 0;
+}
+@keyframes loading_first {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+section .dots_two span {
+	position: absolute;
+	width: 15px; /* 사다리꼴의 전체 너비 (아랫변 길이) */
+	height: 12px; /* 사다리꼴 높이 */
+	background: darkgoldenrod; /* 사다리꼴 색깔 */
+	clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); /* 사다리꼴 모양 정의 */
+	transform: rotate(calc(var(--e) * (360deg / 7))) translateY(30px);
+	animation: loading_two 1.5s linear infinite;
+	animation-delay: calc(var(--e) * 0.1s);
+	opacity: 0;
+}
+@keyframes loading_two {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+section .dots_three span {
+	position: absolute;
+	width: 10px;
+	height: 20px;
+	border-radius: 35%;
+	background: darkgoldenrod;
+	transform: rotate(calc(var(--f) * (360deg / 7))) translateY(30px);
+	animation: loading_two 1.5s linear infinite;
+	animation-delay: calc(var(--f) * 0.1s);
+	opacity: 0;
+}
+@keyframes loading_three {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
