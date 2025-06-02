@@ -17,10 +17,7 @@ autoSlide();
 // 슬라이드 이미지를 표시하는  carouse를 업데이트 하는 함수
 const slideImage = () => {
     // 이미지 인덱스를 계산하여 업데이트 
-    imageIndex =
-        imageIndex === images.length ? 0 // 배열의 인덱스를 넘으면, 처음으로 돌아감 
-            : imageIndex < 0 ? images.length - 1 // 배열의 처음에서 뒤로가려고 하면은, 배열의 마지막으로 돌아감
-                : imageIndex; // 인덱스 그대로 유지 
+    imageIndex = imageIndex === images.length ? 0 : imageIndex < 0 ? images.length - 1 : imageIndex;
     // 특정 이미지를 보여주기 위해 carousel 표시를 업데이트
     carousel.style.transform = `translate(-${imageIndex * 100}%)`;
 };
@@ -29,8 +26,7 @@ const updateClick = (e) => {
     // 자동 슬라이드 쇼 멈추기 
     clearInterval(intervalId);
     // 이미지 인덱스를 기반으로 한 버튼을 클릭하면 계산하여 업데이트 
-    imageIndex += e.target.id === "next" ? 1 // next 버튼 클릭을 하면 1 증가하고
-        : -1;  // 아니면 -1 감소
+    imageIndex += e.target.id === "next" ? 1 : -1;
     slideImage(imageIndex);
     autoSlide();
 
