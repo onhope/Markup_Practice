@@ -5,6 +5,7 @@
 }
 body {
 	height: 100vh;
+	/* flex 이용한 중앙 정렬 */
 	display: flex;
 	background: #4070f4;
 	align-items: center;
