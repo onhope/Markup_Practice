@@ -78,7 +78,7 @@ body {
 .content .input-box input:valid ~ label {
 	top: 0;
 	left: 12px;
-	display: 14px; /* width를 일괄적으로 맞춰주는건가 */
+	font-size: 14px;
 	color: #ba24c2;
 	background: #fff;
 }
