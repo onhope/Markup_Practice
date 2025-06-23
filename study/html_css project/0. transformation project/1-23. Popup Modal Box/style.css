@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.show-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: grey;
+	height: 55px;
+	line-height: 55px;
+	padding: 0 30px;
+	font-size: 20px;
+	font-weight: 400;
+	cursor: pointer;
+	color: #fff;
+	background: #0075da;
+	transition: all 0.3s ease;
+}
+.show-btn:hover {
+	background: #0055da;
+}
+#check {
+	display: none;
+}
+#check:checked ~ .bg {
+	opacity: 1;
+	pointer-events: auto;
+}
+#check:checked ~ .alert_con {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translate(-50%, -50%) scale(1);
+}
+.bg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: #0075da;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+.alert_con {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	max-width: 450px;
+	padding: 70px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	z-index: 5;
+	opacity: 0;
+	pointer-events: none;
+	transform: translate(-50%, -50%) scale(0.97);
+	transition: all 0.3s ease;
+}
+.alert_con .icon {
+	position: absolute;
+	top: -15%;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	line-height: 97px;
+	background: #fff;
+	color: #ff3c5f;
+	border: 10px solid #0075da;
+	font-size: 50px;
+}
+.alert_con header {
+	color: #ff3c5f;
+	font-size: 24px;
+	font-weight: 600;
+	margin: 10px 0;
+}
+.alert_con p {
+	font-size: 14px;
+	line-height: 32px;
+}
+.alert_con .btns {
+	position: absolute;
+	bottom: -15%;
+	display: inline-flex;
+	width: 100%;
+}
+.alert_con label {
+	background: grey;
+	width: 50%;
+	height: 55px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 55px;
+	cursor: pointer;
+	color: #fff;
+}
+.alert_con label:first-child {
+	background: #c5c6e3;
+	color: #000;
+}
+.alert_con label:first-child:hover {
+	background: #b2c1e6;
+}
+.alert_con label:last-child {
+	background: #ff3c5f;
+}
+.alert_con label:last-child:hover {
+	background: #df3d5f;
+}
