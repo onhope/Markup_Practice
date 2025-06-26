@@ -7,15 +7,17 @@
 body {
 	background: #ecf0f3;
 }
+/* nav의 전체적인 레이아웃을 설정 */
 nav {
 	width: 100%;
 	padding: 12px 0;
 	background: #ecf0f3;
 	box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
 }
+/* nav 안의 내용물의 레이아웃을 설정 */
 nav .menu {
-	max-width: 1270px;
-	margin: auto;
+	max-width: 1270px; /* 최대 너비 제한 */
+	margin: auto; /* 가운데 정렬 */
 	padding: 0 20px;
 	display: flex;
 	justify-content: space-between;
