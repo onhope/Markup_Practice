@@ -125,6 +125,7 @@ footer a:hover {
 @media (max-width: 560px) {
 	footer {
 		position: relative;
+		height: 100vh;
 	}
 	footer .content .box {
 		width: 100%;
