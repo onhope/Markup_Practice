@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+	display: grid;
+	height: 100%;
+	place-items: center;
+	background: #000;
+}
+
+.btn a {
+	display: block; /* a 태그는 인라인 요소이기 때문에 width, height 설정이 되지 않으므로, display 속성을 block으로 변경한다.  */
+	height: 70px;
+	width: 220px;
+	background: linear-gradient(
+		100deg,
+		#f8063f,
+		#f902b9,
+		#7702fb,
+		#1c04f7,
+		#0fb6f5
+	);
+	text-align: center;
+	border-radius: 30px;
+	position: relative;
+}
+.btn a span {
+	height: 88%;
+	width: 96%;
+	background: #111;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 30px;
+	line-height: 62px;
+	color: grey;
+	font-size: 25px;
+}
+.btn a:hover {
+	animation: rotate 0.4s linear infinite;
+}
+@keyframes rotate {
+	100% {
+		filter: hue-rotate(-360deg);
+	}
+}
