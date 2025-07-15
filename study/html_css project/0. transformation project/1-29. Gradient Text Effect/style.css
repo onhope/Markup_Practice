@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+html,
+body {
+	display: grid;
+	height: 100%;
+	place-items: center;
+	background: #000;
+}
+.text {
+	font-size: 150px;
+	font-weight: 800;
+	background: linear-gradient(
+		135deg,
+		#833ab4 0%,
+		#fd1d1d 50%,
+		#fcb045 75%,
+		#833ab4 100%
+	);
+	background-clip: text;
+	color: transparent;
+	background-size: 400%;
+	animation: animate 10s linear infinite;
+}
+@keyframes animate {
+	100% {
+		background-position: 400%;
+	}
+}
