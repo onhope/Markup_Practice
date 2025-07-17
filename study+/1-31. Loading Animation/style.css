@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+section {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #2c006e;
+}
+section .loader {
+	width: 200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+.loader .ball {
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	border-radius: 50%;
+	position: absolute;
+}
+.loader .one {
+	left: 0;
+	top: -80px;
+	animation: one 1s infinite;
+}
+.loader .two {
+	left: 75px;
+	top: -80px;
+	animation: two 1.5s infinite;
+}
+.loader .three {
+	right: 0;
+	top: -80px;
+	animation: three 2s infinite;
+}
+@keyframes one {
+	50% {
+		top: 0px;
+	}
+}
+@keyframes two {
+	50% {
+		top: 0px;
+	}
+}
+@keyframes three {
+	50% {
+		top: 0px;
+	}
+}
+section p {
+	margin-top: 40px;
+	font-size: 24px;
+	color: #fff;
+}
