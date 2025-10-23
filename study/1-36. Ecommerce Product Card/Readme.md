@@ -2,7 +2,7 @@
 
 ## 출처
 
-https://youtu.be/JCVVujOBVfk?si=e6wOjGjyCCKct-Zz
+https://youtu.be/JCVVujOBVfk?si=JvCt4lX0E4q5TPHy
 
 ## Result
 
@@ -10,6 +10,4 @@ https://youtu.be/JCVVujOBVfk?si=e6wOjGjyCCKct-Zz
 
 ## Study
 
-### 1. input과 label을 연결
-
-### 2. keyframe을 이용한 애니메이션 만들기ㅏ
+### 1. 요소를 자르는 방법 => Clip-path
