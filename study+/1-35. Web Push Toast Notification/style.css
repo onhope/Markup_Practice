@@ -1,0 +1,105 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	height: 100vh;
+	background: #f6f6f6;
+	/* 애니메이션 hide-box가 100%일때 넘어가면 숨겨서 스크롤바 안 생기도록 하기 */
+	overflow: hidden;
+}
+.container {
+	position: absolute;
+	right: 25px;
+	bottom: 15px;
+}
+.container .box {
+	position: relative;
+	width: 460px;
+	height: 80px;
+	background: #fff;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	padding: 15px 25px 15px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	animation: show-box 0.8s ease forwards;
+}
+
+@keyframes show-box {
+	0% {
+		transform: translateX(100%);
+	}
+	40% {
+		transform: translateX(-5%);
+	}
+	80% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-10x);
+	}
+}
+
+.container .box::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 5px;
+	height: 100%;
+	background: #266f3d;
+}
+#hide:checked ~ .box {
+	animation: hide-box 0.8s ease forwards;
+}
+@keyframes hide-box {
+	0% {
+		transform: translateX(0%);
+	}
+	40% {
+		transform: translateX(5%);
+	}
+	80% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(calc(100% + 25px));
+	}
+}
+.box .status {
+	margin-right: 15px;
+}
+
+.box .status i {
+	font-size: 24px;
+	color: #266f3d;
+}
+.box .right {
+	display: flex;
+	flex-direction: column;
+	margin-right: 25px;
+}
+.box .right .text-1 {
+	font-size: 18px;
+	color: #333;
+	font-weight: 500;
+}
+.box .right .text-2 {
+	font-size: 14px;
+	color: #444;
+	font-weight: 400;
+}
+.box label i {
+	font-size: 18px;
+	color: #666;
+	cursor: pointer;
+}
+label i:hover {
+	color: #000;
+}
+.container #hide {
+	display: none;
+}
