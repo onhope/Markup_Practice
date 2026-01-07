@@ -1,10 +1,8 @@
-* {
+body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
-}
-body {
 	background: #d4e9f7;
 }
 .center {
@@ -14,6 +12,7 @@ body {
 	transform: translate(-50%, -50%);
 }
 .emoji {
+	/* .emoji_face, .emoji_brow, .emoji_eye, .emoji_mouth 의 기준점  */
 	position: relative;
 	display: inline-block;
 	width: 120px;
@@ -83,6 +82,7 @@ body {
 	border-left-color: transparent;
 	border-right-color: transparent;
 }
+/* .emoji_brow:before, .emoji_brow:after 가 겹쳐있는 상태니까 margin값을 이용해서 위치를 이동시켜준다 */
 .emoji_brow:before {
 	margin-left: -25px;
 }
