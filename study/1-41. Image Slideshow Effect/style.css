@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #364b63;
+}
+
+.center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.slider {
+	background-image: url(./assets/1.jpg);
+	background-size: cover;
+	width: 800px;
+	height: 450px;
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+	animation: animate 20s infinite;
+}
+
+@keyframes animate {
+	20% {
+		background-image: url(./assets/2.jpg);
+		background-size: cover;
+	}
+	40% {
+		background-image: url(./assets/3.jpg);
+		background-size: cover;
+	}
+	60% {
+		background-image: url(./assets/4.jpg);
+		background-size: cover;
+	}
+	80% {
+		background-image: url(./assets/5.jpg);
+		background-size: cover;
+	}
+	100% {
+		background-image: url(./assets/1.jpg);
+		background-size: cover;
+	}
+}
