@@ -3,9 +3,7 @@ body {
 	padding: 0;
 	background: black;
 }
-
 .container {
-	/* position을 이용한 중앙 정렬하기  */
 	position: absolute;
 	left: 48%;
 	top: 45%;
@@ -13,48 +11,41 @@ body {
 	padding: 10px;
 }
 input {
-	height: 60px;
 	width: 0px;
+	height: 60px;
 	outline: none;
 	padding: 0 20px;
 	color: black;
-	font-size: 20px;
-	box-sizing: border-box;
-	border: 1px solid #d50000;
 	border-radius: 50px;
+	font-size: 20px;
 	transition: all 0.7s ease;
 }
-
-/* input 박스 안의 search 색 설정*/
 ::placeholder {
 	color: grey;
 }
 .btn {
 	position: absolute;
-	right: 0;
 	top: 0;
-	background: #d50000;
+	right: 0;
 	width: 80px;
-	/* line-height와 height를 동일하게 주면 수직 중앙 정렬 가능 */
-	line-height: 80px;
 	height: 80px;
-	/* 아이콘 수평 중앙 정렬 */
+	line-height: 80px;
 	text-align: center;
+	background: #d50000;
 	border-radius: 50%;
 	cursor: pointer;
 }
 .btn i {
 	font-size: 25px;
 	line-height: 80px;
-	color: white;
+	color: #fff;
 	transition: all 0.7s ease;
 }
 
-/* 마우스 오버 했을 때 효과 : input 요소 너비 350px */
 .container:hover input {
-	width: 350px;
+	width: 340px;
 }
-/* 마우스 오버 했을 때 효과 : i요소 회전 -350deg*/
+
 .container:hover i {
 	transform: rotate(-350deg);
 }
