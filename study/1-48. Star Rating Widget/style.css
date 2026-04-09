@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.center {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.center .stars {
+	height: 150px;
+	width: 600px;
+	text-align: center;
+}
+
+.stars input {
+	display: none;
+}
+
+.stars label {
+	float: right; /* 오른쪽으로 붙이고, 주변 텍스트나 요소들이 빈 공간을 채우게 한다 */
+	font-size: 100px;
+	color: lightgray;
+	margin: 0 5px;
+	text-shadow: 1px 1px #bbb;
+}
+.stars label:before {
+	content: '★';
+}
+.stars input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.stars:not(:checked) > label:hover,
+.stars:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+
+.stars input:checked > label:hover,
+.stars input:checked > label:hover ~ label /* hover된 label 뒤에 있는 모든 label들 */ {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+
+.stars .result:before {
+	content: '';
+	/* 수평 중앙 정렬 */
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -30px;
+	font-size: 30px;
+	font-weight: 500;
+	color: gold;
+	font-family: 'Poppins', sans-serif;
+	display: none;
+}
+
+.stars input:checked ~ .result:before {
+	display: block;
+}
+
+.stars #five:checked ~ .result:before {
+	content: 'I love it 😍';
+}
+
+.stars #four:checked ~ .result:before {
+	content: 'I like it 😎';
+}
+
+.stars #three:checked ~ .result:before {
+	content: "It's good 😄";
+}
+
+.stars #two:checked ~ .result:before {
+	content: "I don't like it 😒";
+}
+
+.stars #one:checked ~ .result:before {
+	content: 'I hate it 😠';
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating Widget</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="center">
+        <div class="stars">
+            <!-- input의 id와 label의 for를 사용하여 둘이 연결 가능 -->
+            <!-- label 안에 input을 넣으면 자동으로 연결이 됨 -->
+            <input type="radio" name="name" id="five" value="5">
+            <label for="five"></label>
+            <input type="radio" name="name" id="four" value="4">
+            <label for="four"></label>
+            <input type="radio" name="name" id="three" value="3">
+            <label for="three"></label>
+            <input type="radio" name="name" id="two" value="2">
+            <label for="two"></label>
+            <input type="radio" name="name" id="one" value="1">
+            <label for="one"></label>
+            <span class="result"></span>
+        </div>
+    </div>
+</body>
+
+</html>
