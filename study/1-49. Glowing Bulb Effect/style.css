@@ -1,0 +1,110 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* body의 자식 요소를 중앙에 배치 */
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #111;
+}
+
+.wrapper {
+	position: relative; /* position: absolute의 기준점 설정*/
+	height: 500px;
+	width: 450px;
+}
+
+.wrapper img {
+	position: absolute; /* position: absolute를 하면 일반적인 흐름에서 빠져나와 자유롭게 위치 설정 */
+	height: 450px;
+	width: 100%;
+	margin-top: -50px;
+}
+
+.wrapper label {
+	/* 위치를 수평 중앙에 위치 */
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.wrapper label span {
+	color: #fff;
+	font-size: 20px;
+	text-transform: uppercase;
+	display: block;
+	border: 2px solid #fff;
+	width: 180px;
+	height: 50px;
+	text-align: center; /* span요소 수평 중앙 정렬 */
+	line-height: 48px; /* 수직 정렬위해 line-height 높이 지정 */
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease; /* 마우스 오버 효과를 주기위햐 설정 */
+}
+
+/* 요소 앞에 가짜 요소 생성하여 텍스트 삽입 */
+.wrapper label span:before {
+	content: 'Turn off';
+}
+
+/* 요소 앞에 가짜 요소에 마우스 오버 했을 때 변화 */
+.wrapper label span:hover {
+	background: #fff;
+	color: #111;
+}
+
+/* 처음은 밸브온 이미지로 시작하 */
+/* opacity: 0는 투명하게 만드나, 존재함  display:none는 삭제하여 존재안하게 만듬 */
+.wrapper img#bulb-on {
+	opacity: 0;
+	animation: glow 3s linear infinite; /* glow라는 애니메이션을 3초 동안 일정한 속도로 계속 반복 실행 */
+}
+
+/* 키프레임으로 단계별 애니메이션 효과 만들기  */
+@keyframes glow {
+	0% {
+		opacity: 1;
+	}
+	5% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+	}
+	74% {
+		opacity: 0;
+	}
+	80% {
+		opacity: 1;
+	}
+	84% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* 버튼이 체크한 상태일 때 bulb-on 이미지 존재 삭제*/
+#btn:checked ~ img#bulb-on {
+	animation: none;
+}
+
+/* 버튼이 체크한 상태일 때 span의 가상요소의 텍스트 변경 */
+#btn:checked ~ label span:before {
+	content: 'Turn on';
+}
+
+/* input은 label과 연결되어 있으므로 안보이게 만들기 */
+.wrapper input {
+	display: none;
+}
