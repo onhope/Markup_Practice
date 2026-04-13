@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.center .stars {
+	height: 150px;
+	width: 600px;
+	text-align: center;
+}
+
+.stars input {
+	display: none;
+	/* label로 연결되어 있으니까 안보여도 됨 */
+}
+
+.stars label {
+	float: right;
+	color: lightgray;
+	font-size: 100px;
+	margin: 0 5px;
+	text-shadow: 1px 1px #bbb;
+}
+
+.stars label:before {
+	content: '★';
+}
+
+.stars input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+
+.stars:not(:checked) ~ label:hover,
+.stars:not(:checked) ~ label:hover ~ label {
+	color: gold;
+}
+
+.stars input:checked ~ label:hover,
+.stars input:checked ~ label:hover ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}

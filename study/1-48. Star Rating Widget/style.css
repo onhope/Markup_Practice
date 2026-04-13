@@ -5,6 +5,7 @@
 }
 
 .center {
+	/* 수직, 수평 중앙 정렬 */
 	position: absolute;
 	top: 45%;
 	left: 50%;
@@ -14,11 +15,12 @@
 .center .stars {
 	height: 150px;
 	width: 600px;
-	text-align: center;
+	text-align: center; /* 텍스트 뿐만 아니라 inline 요소들을 가운데 정렬하는 속성 */
 }
 
 .stars input {
 	display: none;
+	/* 라디오 버튼을 안보이게 만들어 놓음, 왜냐면 label과 연결되어 있으니까 안보여도 됨 */
 }
 
 .stars label {
@@ -31,10 +33,15 @@
 .stars label:before {
 	content: '★';
 }
+
+/* 라디오 버튼 체크시 label에 적용 */
 .stars input:checked ~ label {
 	color: gold;
 	text-shadow: 1px 1px #c60;
 }
+
+/* :not은 괄호 안 조건은 제외하고 나머지 선택한다는 의미 */
+/* 이 코드는 마우스를 올린 별 + 그 앞(또는 뒤) 별들까지 금색으로 바꾸라는 의미 */
 .stars:not(:checked) > label:hover,
 .stars:not(:checked) > label:hover ~ label {
 	color: gold;
@@ -60,6 +67,7 @@
 	display: none;
 }
 
+/* 라디오버튼 체크했을 때 문구 변경 */
 .stars input:checked ~ .result:before {
 	display: block;
 }
